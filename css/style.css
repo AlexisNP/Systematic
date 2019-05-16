@@ -1,0 +1,473 @@
+/* === CSS HEADER === */
+*{margin:0;padding:0;box-sizing:border-box}
+a{text-decoration:none;color:inherit}
+*:focus{outline:none}
+ul{list-style-type: none;}
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+h1,h2{
+  font-family: 'EB Garamond', serif;
+}
+
+/* === MAIN CODE === */
+
+/* =============== GLOBAL HEADER CODE =============== */
+
+header.global{
+  position: sticky;
+  top: 0;
+  padding: 0.75rem 5rem;
+  color: #FFF;
+  background: #ba2e1f;
+  box-shadow: 0 0px 5px 5px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+header.global nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  header.global ul{
+    display: flex;
+  }
+  header.global a{
+    margin: 0 8px;
+    padding: 0 5px 5px;
+  }
+  header.global a:hover{
+    border-bottom: 1px solid #FFF;
+  }
+    header.global li:nth-child(n+2):before{
+      content: "|";
+    }
+
+  header.global form{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: #FFF;
+    border-radius: 5rem;
+  }
+  header.global input,header.global button{
+    display: block;
+    border: none;
+  }
+  header.global input{
+    background: none;
+  }
+  header.global button{
+    color: #ba2e1f;
+    background: #FFF;
+    cursor: pointer;
+  }
+
+/* =============== MAIN SECTION AND ARTICLE CODE =============== */
+
+section.main{
+  padding: 1rem 2rem 2rem;
+}
+
+section.main header{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+section.main h1{
+  position: relative;
+  font-size: 5em;
+  z-index: 0;
+}
+section.main h1:before{
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 5px;
+  display: block;
+  content: "";
+  background: rgba(255,0,0,0.2);
+  z-index: -1;
+}
+section.main h2{
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+section.main .social-links a{color: #333;}
+section.main .social-links a:hover{color: #ee802f;}
+
+section.main nav{
+  margin-top: 1rem;
+  width: 100%;
+  font-weight: 700;
+}
+  section.main nav ul{
+    display: flex;
+    justify-content: space-around;
+    color: #FFF;
+    background: #333333;
+    background: -moz-linear-gradient(top, #333333 0%, #333333 50%, #2b2b2b 51%, #2b2b2b 51%, #2b2b2b 100%);
+    background: -webkit-linear-gradient(top, #333333 0%,#333333 50%,#2b2b2b 51%,#2b2b2b 51%,#2b2b2b 100%);
+    background: linear-gradient(to bottom, #333333 0%,#333333 50%,#2b2b2b 51%,#2b2b2b 51%,#2b2b2b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#2b2b2b',GradientType=0 );
+    border-radius: 5px;
+  }
+  section.main nav li{
+    padding: 10px;
+  }
+  section.main nav li a{
+    padding: 10px;
+  }
+  section.main nav li a:hover{
+    color: #ba2e1f;
+  }
+
+main.article-view{
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main.article-view article{
+  padding: 2rem 5rem 1rem;
+}
+main.article-view h2{
+  font-size: 4em;
+}
+main.article-view article a{
+  float: right;
+  color: #ba2e1f;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+}
+main.article-view article a:hover{
+  border-bottom: 1px solid #ba2e1f;
+}
+main.article-view figure{
+  width: 35rem;
+  height: 25rem;
+  background: url(../img/main-article.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* =============== GLOBAL SECTION MEMES =============== */
+
+section.secondary > .col > * + *,
+section.tertiary > .col > * + *{
+  margin-bottom: 1.5rem;
+}
+
+section.secondary,
+section.tertiary{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  color: #666;
+}
+
+/* =============== SECONDARY SECTION CODE =============== */
+
+section.secondary{background: #F2F2F2;}
+
+section.secondary > .col{
+  width: calc(100% / 3);
+  padding: 0 2rem 2rem;
+}
+section.secondary > .col a,
+section.secondary .col-3 blockquote a{
+  float: right;
+  color: #ba2e1f;
+  border-bottom: 1px solid transparent;
+}
+section.secondary > .col a:hover,
+section.secondary .col-3 blockquote a:hover{
+  border-bottom: 1px solid #ba2e1f;
+}
+
+section.secondary > .col h2{
+  margin: 2rem 0;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: #333;
+}
+
+section.secondary .col-1 figure img{
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+section.secondary .col-2 .service{
+  padding: 0.3rem 0;
+}
+section.secondary .col-2 figure{
+  float: left;
+  width: 64px;
+  height: 64px;
+  margin: 0 25px 0 0;
+  background: url(../img/services-item-1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+section.secondary .col-3 blockquote h3{
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+section.secondary .col-3 blockquote h3:before{
+  display: inline-block;
+  content: "“";
+  font-size: 3em;
+}
+
+/* =============== TERTIARY SECTION CODE =============== */
+
+section.tertiary > .col{
+  width: calc(100% / 4);
+  padding: 2rem;
+}
+
+section.tertiary > .col h2{
+  padding: 1rem 0 2rem;
+  border-top: 2px solid #666;
+}
+
+section.tertiary .col-1 a{
+  font-weight: 700;
+  color: #DB6457;
+}
+section.tertiary .col-1 a:hover{
+  color: #ba2e1f;
+}
+section.tertiary .col-1 time{
+  font-style: italic;
+}
+
+section.tertiary .col-2 a{
+  padding: 0.25rem 0;
+}
+section.tertiary .col-2 a:after{
+  width: 0%;
+  margin: 0.25rem 0 0.5rem 0;
+  display: block;
+  border-bottom: 1px solid #555;
+  content: "";
+  transition: 0.9s all ease-out;
+}
+section.tertiary .col-2 a:hover{
+  color: #000;
+  transition: 0.9s all ease-out;
+}
+section.tertiary .col-2 a:hover:after{
+  width: 50%;
+  transition: 0.9s all ease-out;
+}
+section.tertiary .col-2 a:before{
+  margin: 0 0.5rem 0 0;
+  display: inline-block;
+  content: "»";
+}
+
+section.tertiary .col-3 h3{
+  font-size: 1.1em;
+}
+section.tertiary .col-3 .details{
+  font-size: 0.8em;
+}
+section.tertiary .col-3 a{color: #DB6457;}
+section.tertiary .col-3 section > a{
+  float: right;
+}
+section.tertiary .col-3 a:hover{color: #ba2e1f;}
+section.tertiary .col-3 article{
+  padding: 0.75rem 0;
+}
+
+section.tertiary .col-4 input,
+section.tertiary .col-4 textarea{
+  padding: 0.5rem;
+  font-family: 'PT Sans', sans-serif;
+  background: #F2F2F2;
+  border: none;
+  border-radius: 5px;
+}
+section.tertiary .col-4 input[type=text]{
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: block;
+
+}
+section.tertiary .col-4 textarea{
+  min-height: 8rem;
+  max-height: 8rem;
+  min-width: 100%;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
+section.tertiary .col-4 input[type=submit]{
+  color: #ba2e1f;
+  background: #EAEAEA;
+}
+section.tertiary .col-4 input[type=submit]:hover{
+  cursor: pointer;
+  background: #CCC;
+}
+
+/* =============== GLOBAL FOOTER CODE =============== */
+
+footer{
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  background: #F2F2F2;
+}
+
+/* =============== UTILITY CLASSES =============== */
+
+.clear{clear: both;}
+.burger-container{display: none;}
+
+/* =============== UTILITY CLASSES =============== */
+
+@media
+only screen
+and (max-width:1070px){
+
+/* Global Header */
+
+header.global{
+  padding: 0.5rem 1rem;
+}
+header.global a{
+  margin: 0;
+  padding: 0px 5px 5px;
+}
+header.global nav{
+  display: block;
+}
+header.global nav ul{
+  justify-content: center;
+}
+header.global form{
+  margin: 1rem auto 0;
+  justify-content: center;
+  width: 70%;
+}
+
+/* Main Header */
+  section.main{
+    padding: 0;
+  }
+  .burger-container{
+    display: flex;
+    justify-content: flex-end;
+  }
+  #toggle-menu{
+    align-self: center;
+    width: 40px;
+    margin: 8px;
+    cursor: pointer;
+  }
+  section.main h1{
+    font-size: 3.7em;
+  }
+  section.main h1:before{
+    width: 90%;
+  }
+  section.main header{
+    padding: 0.5rem;
+  }
+  section.main nav > div{
+    border-radius: 5px 5px 0 0;
+    background: #333;
+  }
+  section.main nav ul{
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+  }
+  section.main nav ul a{
+    display: block;
+    padding: 0 10px;
+  }
+  .burgerOn{
+    max-height: 500px;
+    overflow: hidden;
+    transition: 1s all ease-out;
+  }
+  .burgerOff{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s all ease-out;
+  }
+
+  /* Main Section */
+
+  main.article-view {
+    padding: 1rem 0;
+    display: block;
+  }
+  main.article-view figure{
+    width: 100vw;
+    height: 10rem;
+  }
+  main.article-view article{
+    padding: 0.5rem 0.8rem 2rem;
+  }
+  main.article-view article h2{
+    font-size: 2em;
+    text-align: center;
+  }
+  main.article-view article p{
+    font-size: 0.8em;
+  }
+  main.article-view article a{
+    margin-top: 0.5rem;
+    font-size: 1em;
+  }
+
+  /* Secondary + Tertiary Section */
+  section.secondary > .col > * + *,
+  section.tertiary > .col > * + *{
+    margin-bottom: 0.2rem;
+  }
+  section.secondary > .col,
+  section.tertiary > .col{
+    width: 100% !important;
+    padding: 0 1rem 1rem;
+  }
+
+  /* Secondary Section */
+  section.secondary > .col h2{
+    margin: 1rem 0;
+    font-size: 1.4em;
+  }
+  section.secondary > .col h3{
+    font-size: 1em;
+  }
+  section.secondary > .col p{
+    font-size: 0.85em;
+  }
+  section.secondary .col-1 figure img{
+    width: 60%;
+    margin: auto;
+  }
+  section.secondary .col-2 .service{
+    margin-bottom: 0;
+  }
+
+  /* Tertiary Section */
+  section.tertiary{
+    padding-top: 1rem;
+  }
+  section.tertiary > .col h2{
+    border-top: 1px solid #666;
+  }
+
+}
